@@ -8,46 +8,88 @@
 
 <body>
 
-  <header>
-    <h1>CV</h1>
-    <p class="subtitle">Curriculum vitae and academic experience</p>
+  <div class="page-wrapper">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="research.html">Research</a>
-      <a href="cv.html">CV</a>
-      <a href="outreach.html">Outreach</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header class="site-header">
+      <div>
+        <p class="header-small">Curriculum Vitae</p>
+        <h1>CV</h1>
+        <p class="subtitle">
+          Academic background, research experience, technical skills, leadership,
+          service, and outreach.
+        </p>
+      </div>
 
-  <main>
-    <section>
-      <h2>Curriculum Vitae</h2>
-      <p>
-        A downloadable CV will be added here.
-      </p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="cv.html">CV</a>
+        <a href="outreach.html">Outreach</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-      <!-- Later, after uploading your CV PDF, replace the line above with:
-      <p><a href="Ingrid_Carrasco_CV.pdf">Download my CV</a></p>
-      -->
-    </section>
+    <main>
 
-    <section class="card">
-      <h2>Education</h2>
-      <p>
-        B.S. Planetary Science, Florida Institute of Technology
-      </p>
-    </section>
+      <section class="two-column">
+        <div>
+          <h2 class="section-title">Curriculum Vitae</h2>
+          <p>
+            My CV includes research experience in exoplanet habitability modeling,
+            CERN CMS testing, spectroscopy, observatory work, student research leadership,
+            and STEM outreach.
+          </p>
 
-    <section class="card">
-      <h2>Research Experience</h2>
-      <p>
-        Research experience details coming soon.
-      </p>
-    </section>
-  </main>
+          <a class="button" href="CV_Ingrid_Carrasco.pdf">Download CV</a>
+        </div>
+
+        <div class="card">
+          <h3>Education</h3>
+          <ul class="feature-list">
+            <li>M.S. Earth Sciences, Geophysics Concentration, University of Oregon — starting Fall 2026</li>
+            <li>B.S. Planetary Sciences, Florida Institute of Technology — May 2026</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Experience</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Research</h3>
+            <p>
+              Exoplanet habitability evolution, CERN CMS Inner Tracker testing,
+              lightning detection spectroscopy, and simulated Martian soil research.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Leadership</h3>
+            <p>
+              President of the Astronomical Research and Education Society and
+              officer in Gamma Phi Beta.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Technical Skills</h3>
+            <p>
+              Python, C++, Ubuntu, Google Colab, Visual Studio, spectroscopy,
+              remote sensing, astronomical data reduction, and telescope operation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© Ingrid Carrasco</p>
+    </footer>
+
+  </div>
 
 </body>
 </html>
