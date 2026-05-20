@@ -1,61 +1,208 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 0 24px 50px;
-  line-height: 1.6;
-  color: #222;
-  background: #fafafa;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600&display=swap');
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --soft-gray: #f5f3ef;
+  --line: #d8d2c7;
+  --accent: #5f4b32;
 }
 
-header {
-  padding: 40px 0 20px;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 25px;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--soft-gray);
+  color: var(--black);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.page-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px 70px;
+}
+
+.site-header {
+  min-height: 420px;
+  margin: 32px 0 60px;
+  padding: 42px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(245, 243, 239, 0.80), rgba(245, 243, 239, 0.86)),
+    url("images/observatory.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-small {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 
 h1 {
-  margin-bottom: 5px;
-  font-size: 2.3rem;
-}
-
-h2 {
-  margin-top: 35px;
-  color: #333;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(3rem, 7vw, 6.8rem);
+  line-height: 0.95;
+  font-weight: 700;
+  margin: 0;
+  color: var(--black);
 }
 
 .subtitle {
-  color: #555;
-  font-size: 1.1rem;
+  max-width: 780px;
+  font-family: 'Noto Serif Devanagari', Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.7;
+  margin-top: 24px;
+  color: var(--black);
 }
 
 nav {
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+  margin-top: 42px;
+  padding-top: 24px;
+  border-top: 1px solid var(--black);
 }
 
 nav a {
+  color: var(--black);
   text-decoration: none;
-  color: #315f9c;
-  margin-right: 18px;
-  font-weight: bold;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--black);
 }
 
 main {
-  margin-top: 25px;
+  display: grid;
+  gap: 70px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.05;
+  margin: 0 0 24px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
 }
 
 .card {
-  background: white;
-  border: 1px solid #ddd;
-  padding: 22px;
-  margin: 20px 0;
-  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 32px;
+  min-height: 260px;
+}
+
+.card h2,
+.card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+.image-card {
+  width: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.full-width-image {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 20px;
+  border: 1px solid var(--black);
+  color: var(--black);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.button:hover {
+  background: var(--black);
+  color: var(--white);
 }
 
 a {
-  color: #315f9c;
+  color: var(--black);
+}
+
+footer {
+  margin-top: 80px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 850px) {
+  .page-wrapper {
+    padding: 0 20px 50px;
+  }
+
+  .site-header {
+    padding: 28px;
+    min-height: 360px;
+  }
+
+  .two-column,
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-card,
+  .full-width-image {
+    min-height: 300px;
+    height: 320px;
+  }
 }
