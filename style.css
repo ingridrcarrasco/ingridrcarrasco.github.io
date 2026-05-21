@@ -390,3 +390,35 @@ footer {
     min-height: 300px;
   }
 }
+.secret-star {
+  margin-top: 12px;
+  border: none;
+  background: none;
+  color: var(--black);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.45;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.secret-star:hover {
+  opacity: 1;
+  transform: rotate(20deg) scale(1.15);
+}
+
+.secret-message {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+  font-family: 'Noto Serif Devanagari', Georgia, serif;
+  font-size: 0.95rem;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+}
+
+.secret-message.show-secret {
+  max-height: 80px;
+  opacity: 1;
+  margin-top: 10px;
+}
