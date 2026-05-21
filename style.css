@@ -374,3 +374,19 @@ footer {
     height: 280px;
   }
 }
+.image-contain-card {
+  width: 100%;
+  min-height: 420px;
+  height: 480px;
+  object-fit: contain;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 18px;
+}
+
+@media (max-width: 850px) {
+  .image-contain-card {
+    height: 360px;
+    min-height: 300px;
+  }
+}
