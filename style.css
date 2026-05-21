@@ -280,7 +280,7 @@ a {
 .header-home {
   background:
     linear-gradient(rgba(245, 243, 239, 0.80), rgba(245, 243, 239, 0.86)),
-    url("images/observatory.jpg");
+    url("images/mt-hood.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -296,7 +296,7 @@ a {
 .header-research {
   background:
     linear-gradient(rgba(245, 243, 239, 0.80), rgba(245, 243, 239, 0.86)),
-    url("images/enceladus.jpg");
+    url("images/mt-hood.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -304,7 +304,7 @@ a {
 .header-outreach {
   background:
     linear-gradient(rgba(245, 243, 239, 0.80), rgba(245, 243, 239, 0.86)),
-    url("images/ksc-2.jpg");
+    url("images/mt-hood.jpg");
   background-size: cover;
   background-position: center;
 }
