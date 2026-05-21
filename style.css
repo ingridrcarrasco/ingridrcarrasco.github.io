@@ -43,7 +43,7 @@ body {
 }
 
 .header-small {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.8rem;
@@ -178,34 +178,6 @@ a {
   color: var(--black);
 }
 
-footer {
-  margin-top: 80px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
-  font-size: 0.9rem;
-}
-
-@media (max-width: 850px) {
-  .page-wrapper {
-    padding: 0 20px 50px;
-  }
-
-  .site-header {
-    padding: 28px;
-    min-height: 360px;
-  }
-
-  .two-column,
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .image-card,
-  .full-width-image {
-    min-height: 300px;
-    height: 320px;
-  }
-}
 .hero-image {
   width: 100%;
   height: 520px;
@@ -237,48 +209,168 @@ footer {
 .activity-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 0;
+  width: 100%;
+  border: 1px solid var(--line);
 }
 
-.activity-card {
+.activity-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.photo-tile {
   background: var(--white);
   border: 1px solid var(--line);
   overflow: hidden;
 }
 
-.activity-card img {
+.photo-tile img {
   width: 100%;
-  height: 260px;
+  height: 240px;
   object-fit: cover;
   display: block;
 }
 
-.activity-card p {
+.photo-tile p {
   margin: 0;
-  padding: 14px 16px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  padding: 14px 16px 18px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.wide-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 38px;
+}
+
+.split-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+.split-gallery img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.header-home {
+  background:
+    linear-gradient(rgba(245, 243, 239, 0.80), rgba(245, 243, 239, 0.86)),
+    url("images/observatory.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header-about {
+  background:
+    linear-gradient(rgba(245, 243, 239, 0.80), rgba(245, 243, 239, 0.86)),
+    url("images/mt-hood.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header-research {
+  background:
+    linear-gradient(rgba(245, 243, 239, 0.80), rgba(245, 243, 239, 0.86)),
+    url("images/research-astrotech.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header-outreach {
+  background:
+    linear-gradient(rgba(245, 243, 239, 0.80), rgba(245, 243, 239, 0.86)),
+    url("images/outreach-ksc.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header-contact {
+  background:
+    linear-gradient(rgba(245, 243, 239, 0.82), rgba(245, 243, 239, 0.88)),
+    url("images/observatory.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  margin-top: 80px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
 }
 
 @media (max-width: 850px) {
+  .page-wrapper {
+    padding: 0 20px 50px;
+  }
+
+  .site-header {
+    padding: 28px;
+    min-height: 360px;
+  }
+
+  .two-column,
+  .card-grid,
+  .photo-grid,
+  .split-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .image-card,
+  .full-width-image {
+    min-height: 300px;
+    height: 320px;
+  }
+
   .hero-image {
     height: 340px;
   }
 
   .activity-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .activity-card img {
-    height: 220px;
+  .activity-grid img {
+    height: 240px;
+  }
+
+  .photo-tile img,
+  .split-gallery img {
+    height: 300px;
   }
 }
 
 @media (max-width: 520px) {
   .activity-grid {
     grid-template-columns: 1fr;
+  }
+
+  .activity-grid img {
+    height: 280px;
   }
 }
