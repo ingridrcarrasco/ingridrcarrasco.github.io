@@ -101,8 +101,23 @@
     </main>
 
     <footer>
-      <p>© Ingrid Carrasco</p>
-    </footer>
+  <p>© Ingrid Carrasco</p>
+
+  <button class="secret-star" onclick="revealSecretMessage()" aria-label="Reveal secret message">
+    ✦
+  </button>
+
+  <p id="secret-message" class="secret-message">
+    You found the tiny star. Life is meant to be lived.
+  </p>
+</footer>
+
+<script>
+  function revealSecretMessage() {
+    const message = document.getElementById("secret-message");
+    message.classList.toggle("show-secret");
+  }
+</script>
 
   </div>
 
